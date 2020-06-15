@@ -1,0 +1,134 @@
+:root {
+  --base-color: #85c7fa;
+  --dark-grey: #3a4856;
+  --light-grey: #9dadbc;
+  --orange: #f08879;
+  --dark-orange: #ed6d5a;
+  --green: #00bb96;
+  --green-dark: #00997b;
+  --light: #effbff;
+}
+
+@font-face {
+  font-family: 'Yellow Rabbit';
+  src: url('../fonts/Yellow\ Rabbit\ -\ Personal\ Use.otf') format('opentype');
+}
+
+/* Basic setup ===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Lato', sans-serif;
+  color: var(--light);
+}
+
+/* Buttons =========================================================== */
+
+.btn {
+  letter-spacing: 0.03rem;
+  display: inline-block;
+  padding: 12px 25px;
+  text-decoration: none;
+  color: var(--light);
+  border-radius: 20px;
+  background-color: var(--green);
+  transition: background-color 0.5s;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: var(--green-dark);
+}
+
+.btn-orange {
+  background-color: var(--orange);
+}
+
+.btn-orange:hover,
+.btn-orange:active {
+  background-color: var(--dark-orange);
+}
+
+/* Header design ===================================================== */
+
+header {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background: linear-gradient(
+      to top right,
+      #85c7fa52,
+      #4adafe52,
+      #25ebea52,
+      #65f6c352,
+      #aefb9552
+    ),
+    url(../img/blue-fog-mountains.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Navbar ========================================================= */
+
+.nav {
+  height: 12vh;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  padding: 0 15px;
+  background-color: rgba(157, 173, 188, 0.4);
+  text-transform: uppercase;
+  text-shadow: 1px 1px 4px var(--light-grey);
+}
+
+.logo {
+  font-family: 'Yellow Rabbit', sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  word-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
+}
+
+.main-nav {
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: center;
+  font-size: 1.2rem;
+  list-style: none;
+}
+
+.main-nav li a {
+  color: white;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+  color: var(--dark-grey);
+}
+
+.text {
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+  justify-self: center;
+  align-self: center;
+  text-shadow: 1px 1px 4px var(--light-grey);
+}
+
+.text h3 {
+  font-size: 1.8rem;
+}
+
+.text h1 {
+  font-size: 3.7rem;
+}
+
+.text p {
+  font-size: 1.3rem;
+}
